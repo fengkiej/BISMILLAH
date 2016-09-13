@@ -1,0 +1,9 @@
+.nav>li{
+	position: relative;
+	display: block;
+}
+
+#nav ul li{
+    display: inline-block;
+    float: right;
+}
