@@ -1,5 +1,10 @@
 @extends('layouts.master')
 
+@section('head')
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/chocolat.css">
+@endsection
+
 @section('title', 'Home')
 
 @section('content')
@@ -10,21 +15,6 @@
 		<div class="slider-info">
 			<div class="logo">
 				<a href="#">HITECH INFO</a>
-			</div>
-
-			<div class="side">
-				<nav class="dr-menu">
-					<div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span></div>
-					<ul>
-						<li><a class="scroll dr-icon dr-icon-user" href="#about">ABOUT</a></li>
-						<li><a class="scroll dr-icon dr-icon-camera" href="#services">SERVICES</a></li>
-						<li><a class="scroll dr-icon dr-icon-bullhorn" href="#pricing">PRICING</a></li>
-						<li><a class="scroll dr-icon dr-icon-heart" href="#team">TEAM</a></li>
-						<li><a class="scroll dr-icon dr-icon-download" href="#projects">PROJECTS</a></li>
-						<li><a class="scroll dr-icon dr-icon-settings" href="#testimonial">TESTIMONIAL</a></li>
-						<li><a class="scroll dr-icon dr-icon-switch" href="#newsletter">CONTACT</a></li>
-					</ul>
-				</nav>
 			</div>
 		</div>
 
@@ -190,59 +180,6 @@
 	<!-- //Services -->
 
 
-
-	<!-- Pricing -->
-	<div class="pricing" id="pricing">
-		<div class="container">
-
-			<h3>PRICING</h3>
-			<div class="heading-underline">
-				<div class="h-u1"></div><div class="h-u2"></div><div class="h-u3"></div><div class="clearfix"></div>
-			</div>
-
-			<div class="pricing-grids">
-				<div class="grid1">
-					<span>$15/<small>month</small></span>
-					<h4>BASIC PLAN</h4>
-					<ul class="para">
-						<li>1 Lorem Ipsum</li>
-						<li>10 GB Dolores Amet</li>
-						<li>50 GB Consectetur</li>
-						<li>Free Adipiscing</li>
-					</ul>
-					<div class="sign text-center">
-						<a class="popup-with-zoom-anim" href="#small-dialog">BUY</a>
-					</div>
-				</div>
-
-				<div class="grid2">
-					<span>$25/<small>month</small></span>
-					<h4>PREMIUM PLAN</h4>
-					<ul class="para">
-						<li>5 Lorem Ipsum</li>
-						<li>50 GB Dolores Amet</li>
-						<li>250 GB Consectetur</li>
-						<li>2 Adipiscing</li>
-					</ul>
-					<div class="sign text-center">
-						<a class="popup-with-zoom-anim" href="#small-dialog">BUY</a>
-					</div>
-				</div>
-
-				<div class="grid3">
-					<span>$35/<small>month</small></span>
-					<h4>ULTIMATE PLAN</h4>
-					<ul class="para">
-						<li>10 Lorem Ipsum</li>
-						<li>250 GB Dolores Amet</li>
-						<li>500 GB Consectetur</li>
-						<li>3 Adipiscing</li>
-					</ul>
-					<div class="sign text-center">
-						<a class="popup-with-zoom-anim" href="#small-dialog">BUY</a>
-					</div>
-				</div>
-				<div class="clearfix"></div>
 
 				<!-- Popup-Box -->
 				<div id="popup">
@@ -738,8 +675,5 @@
 		<!-- //Smooth-Scrolling-JavaScript -->
 
 	<!-- //Custom-JavaScript-File-Links -->
-
-</body>
-<!-- //Body -->
 
 @endsection

@@ -5,7 +5,7 @@
 @section('content')
 	<div style="text-align: center; margin-top:50px">
 
-		<img src="img/user.png" alt="User" class="img-circle img-responsive" style="width: 32vh; height: 32vh; background-color:#a6a6a6; margin-left:auto; margin-right:auto;">
+		<img src="img/user.png" alt="User" class="img-circle img-responsive" style="width: 32vh; height: 32vh; background-color:#a6a6a6; margin-left:auto; margin-right:auto; ">
 		<div style="margin-top:20px; font-size:3.7vh">Qrim.in/user</div>
 
 		<button style="margin:16px">TRANSFER</button>
