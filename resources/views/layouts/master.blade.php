@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="/js/jquery-2.1.4.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
-        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-                <link rel="stylesheet" type="text/css" href="css/custom.css"> 
+        <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+                <link rel="stylesheet" type="text/css" href="/css/custom.css"> 
         @yield('head')
 
         <title>Qrim - @yield('title')</title>

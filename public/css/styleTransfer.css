@@ -85,9 +85,9 @@ p.footer a:hover{
 }
 .pay-tabs{
     margin: 0 0 2em 0;
-    padding: 1em 1em 1.5em 1em;
+    padding: 1em 1em 6em 1em;
     background: #fff;
-    border: 1px solid #e7ebee;	
+    border: 1px solid #e7ebee;
 }
 .pay-tabs h2{
     font-size: 26px;
@@ -444,8 +444,8 @@ label.checkbox {
   background: url("../images/tick-mark1.png") no-repeat center;
   top: 1px;
   left: 1px;
-  width: 9px;
-  height: 9px;
+  /* width: 9px; */
+  /* height: 9px; */
   text-align: center;
 }
 .radio input:checked + i {

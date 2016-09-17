@@ -12,9 +12,9 @@
 			<img src="images/team-3.png" alt="User" class="img-circle img-responsive" style="width: 20vh; height: 20vh; background-color:#f6f6f6; margin-left:auto; margin-right:auto;">
 			</span>
 		</div>
-		<h3>{{\Auth::user()->name}}</h3>
-		<a style="margin-top:0px; margin-bottom:0px; font-size:2.7vh">qrim.in/{{\Auth::user()->username}}</a> <br/>
-		<form action="transfer" method="get">
+		<h3>{{$user[0]['name']}}</h3>
+		<a style="margin-top:0px; margin-bottom:0px; font-size:2.7vh">qrim.in/{{$user[0]['username']}}</a> <br/>
+		<form action="{{$user[0]['username']}}/transfer" method="get">
 		<h3>Rp</h3><input type="text" style="width: 5em; text-align:center; font-size: 2em" name="nominal"> <br/>
 
 		<button class="btn btn-success" style="margin:5px; width: 9em; text-decoration: none;">Qrim</button>
