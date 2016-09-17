@@ -5,14 +5,9 @@
 @section('content')
 	<div class="card" style="text-align: center; margin : 50px 16px 50px 16px; border: 2px solid white;">
 
-	<div class="profile-header img-responsive">
-		<img src="img/user.png" alt="User" class="img-circle img-responsive" style="width: 20vh; height: 20vh; background-color:#a6a6a6; margin-left:auto; margin-right:auto;">
-	</div>
-
-		<!-- <div id="img-profile">
-			<img id="img-avatar" src="img/user.png" alt="User" class="img-circle img-responsive" style="width: 20vh; height: 20vh; background-color:#a6a6a6; position: absolute; left:auto; right:auto; text-align:center;">
-			<img src="img/header.png" alt="Header" class="img-responsive header">
-		</div> -->
+		<div class="profile-header img-responsive">
+			<img src="img/user.png" alt="User" class="img-circle img-responsive" style="width: 20vh; height: 20vh; background-color:#a6a6a6; margin-left:auto; margin-right:auto;">
+		</div>
 
 		<a style="margin-top:20px; font-size:3.7vh">Qrim.in/user</a> <br>
 
