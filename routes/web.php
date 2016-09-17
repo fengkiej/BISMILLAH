@@ -16,7 +16,9 @@ Route::get('/', function(){
 });
 
 Route::get('/dashboard', function(){
-	return view('dashboard');
+	$username = \Auth::user()->username;
+	$ledger = \App\Ledger::where('from', $username)->orWhere('to', $username)->get();
+	return view('dashboard',['ledger' => $ledger, 'username' => $username]);
 });
 
 Route::post('/send/{user}', 'TransactionController@transfer');
