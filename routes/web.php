@@ -22,3 +22,9 @@ Route::get('/', function(){
 Route::get('/dashboard', function(){
 	return view('dashboard');
 });
+
+Route::post('/user/{user}', 'TransactionController@transfer');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

@@ -13,12 +13,13 @@ class CreateLedger extends Migration
      */
     public function up()
     {
-        Schema::table('ledger', function (Blueprint $table) {
+        Schema::create('ledgers', function (Blueprint $table) {
             $table->timestamps();
             $table->string('from')->reference('username')->on('users');
             $table->string('to')->reference('username')->on('users');
             $table->increments('id');
             $table->integer('nominal');
+            $table->string('status');
         });
     }
 
@@ -29,6 +30,6 @@ class CreateLedger extends Migration
      */
     public function down()
     {
-        Schema::drop('ledger');
+        Schema::drop('ledgers');
     }
 }
