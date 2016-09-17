@@ -413,15 +413,11 @@
 						<h4>Irfan M -CEO OmahTI</h4>
 					</li>
 					<li>
-						<p>Perjuanganku lebih mudah karena mengusir penjajah, tetapi perjuanganmu lebih sulit karena melawan bangsamu sendirip>
+						<p>Perjuanganku lebih mudah karena mengusir penjajah, tetapi perjuanganmu lebih sulit karena melawan bangsamu sendiri</p>
 						<h4>Ir. Soekarno -Presiden Indonesia</h4>
 					</li>
 					<li>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-						<h4>Jack Doe</h4>
-					</li>
-					<li>
-						<p>sebuah mesin mampu setara dengan hasil kerja ribuan manusia. Tapi mesin belum mampu sesempurnah manusia, bahkan belum mampu menyerupai kesempurnaan mahluk hidup sederhana.p>
+						<p>sebuah mesin mampu setara dengan hasil kerja ribuan manusia. Tapi mesin belum mampu sesempurnah manusia, bahkan belum mampu menyerupai kesempurnaan mahluk hidup sederhana.</p>
 						<h4>Anonnymous</h4>
 					</li>
 					<li>
