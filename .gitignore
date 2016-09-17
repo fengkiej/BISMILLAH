@@ -5,3 +5,11 @@
 Homestead.json
 Homestead.yaml
 .env
+
+resources/views/TransferDetail.blade.php
+
+public/.DS_Store
+
+public/.DS_Store
+
+*.css

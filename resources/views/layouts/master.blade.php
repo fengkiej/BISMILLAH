@@ -4,10 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/custom.css">
-        
+        <link href="css/stylelogin.css" rel='stylesheet' type='text/css' />    
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,500,500i,700,900|Sail" rel="stylesheet"> 
+        <link href="css/styleTransfer.css" rel="stylesheet" type="text/css" media="all" />
+        <script type="text/javascript" src="js/jquery.min.js"></script>
         @yield('head')
 
         <title>Qrim - @yield('title')</title>
