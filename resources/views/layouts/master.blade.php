@@ -7,17 +7,8 @@
         <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
-        <link rel="stylesheet" type="text/css" href="css/custom.css"> 
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-<<<<<<< HEAD
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,500,500i,700,900|Sail" rel="stylesheet"> 
-        <link href="css/styleTransfer.css" rel="stylesheet" type="text/css" media="all" />
-=======
-
-        <link rel="stylesheet" type="text/css" href="css/custom.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,500,500i,700,900|Sail" rel="stylesheet">
->>>>>>> 1e5b1ad1480a79d95de16efc0ab270417cc90c27
-
+                <link rel="stylesheet" type="text/css" href="css/custom.css"> 
         @yield('head')
 
         <title>Qrim - @yield('title')</title>
