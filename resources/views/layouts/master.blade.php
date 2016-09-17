@@ -14,7 +14,7 @@
     </head>
     <body style="background:#d9d9d9">
         
-        <nav id="nav" class="navbar-fixed-top navbar-inverse" style="opacity:0.9;">
+        <nav id="nav" class="navbar-fixed-top navbar-inverse" style="opacity:0.9; height:8%; ">
             <div class="container-fluid row">
                 <div class="navbar-header col-sm-2 col-xs-2 col-md-2 col-lg-2">
                     <a class="navbar-brand" href="#">Qrim</a>
@@ -38,17 +38,17 @@
             <a href="#">Logout</a>
         </div>
 
-        <div id="main" style="padding-top:50px; padding-bottom:50px">
+        <div style="padding-top:8%; padding-bottom:50px;">
             @yield('content')
         </div>
 
         <script>
             function toggleNav() {
                 var element = document.getElementById('sideNav');
-                if(element.style.width == "250px"){
+                if(element.style.width == "40%"){
                     element.style.width = "0px";
                 } else{
-                    element.style.width = "250px"
+                    element.style.width = "40%"
                 }
             }
         </script>
