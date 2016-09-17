@@ -13,7 +13,7 @@
 
 		<button style="margin:16px; text-decoration: none;">TRANSFER</button>
 
-		<div class="row" style="margin-left:auto; margin-right:auto; width:80%; border:2px solid #ddd">
+		<div class="row" style="margin-left:auto; margin-right:auto; width:80%; border:2px solid #ddd; margin-bottom: 20px;">
 			<div>Welcome</div>
 			<div style="width:100%; height:275px; border-top:1px solid #ddd; border-bottom:1px solid #ddd; overflow-y:auto; background:white"></div>
 			<div class="row" style="width:100%; height:30px; margin-left:auto; margin-right:auto; position:inline-block;">

@@ -26,10 +26,14 @@
                 <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6"></div>
                 <div class=" col-sm-4 col-xs-4 col-md-4 col-lg-4">
                     <ul class="nav navbar-nav navbar-right row">
-                        <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span id="ham-btn" class="glyphicon glyphicon-menu-hamburger" onclick="toggleNav()"></span></a></li>
-                        <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span id="notif-btn" class="glyphicon glyphicon-bell popup" onclick="notification()"></span></a></li>
-                        <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span id="search-btn" class="glyphicon glyphicon-search" onclick="search()"></span></a></li>
-                        <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6"></li>
+                        <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span class="glyphicon glyphicon-menu-hamburger" onclick="toggleNav()"></span></a></li>
+                        <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span class="glyphicon glyphicon-bell popup" onclick="notification()"></span></a></li>
+                        <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span class="glyphicon glyphicon-search" onclick="search()"></span></a></li>
+                        <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="position: absolute;">
+                            <!-- <a href="">
+                                <input id="search-inp" type="text" name="search" placeholder="search.." style="border: none; border-radius: 10px; width: 100%; vertical-align: middle; float: right; padding-left: 10px; margin-right: 40%;">
+                            </a> -->
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -78,6 +82,17 @@
         </script>
 
         <script>
+            function search(){
+                var search = document.getElementById('search-inp');
+                if(search.style.width=="0px"){
+                    search.style.width="100%"
+                } else{
+                    search.style.width="0px"
+                }
+            }
+        </script>
+
+        <script>
             function init(){
                 var notif = document.getElementById('notif');
                 var sidebar = document.getElementById('sideNav');
@@ -88,12 +103,5 @@
             }
         </script>
 
-        <script>
-            function search(){
-                var ham = document.getElementById('ham-btn');
-                var notif = document.getElementById('notif-btn');
-                var src = document.getElementById('search-btn');
-            }
-        </script>
     </body>
 </html>
