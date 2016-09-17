@@ -16,6 +16,7 @@
 			border-collapse: collapse;
 		}
 	</style>
+
 @endsection
 
 @section('title', 'Dashboard')
@@ -38,7 +39,8 @@
 			</div>
 		</div>
 
-		<table style="width:95%; margin-left:auto; margin-right:auto; margin-top: 16px">
+		<div style="overflow-x:visible; width:10px; ">
+		<table style="margin-left:auto; margin-top: 16px">
 			<tr>
 				<td>Time Stamp</td>
 				<td>From</td>
@@ -82,6 +84,7 @@
 				<td>Done</td>
 			</tr>
 		</table>
+		</div>
 
 		<script type="text/javascript">
 			window.onload = function () {

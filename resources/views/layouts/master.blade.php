@@ -6,9 +6,9 @@
 
         <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    
+        <link rel="stylesheet" type="text/css" href="css/custom.css"> 
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/custom.css">  
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,500,500i,700,900|Sail" rel="stylesheet"> 
         <link href="css/styleTransfer.css" rel="stylesheet" type="text/css" media="all" />
 
@@ -16,7 +16,7 @@
 
         <title>Qrim - @yield('title')</title>
     </head>
-    <body style="background:#d9d9d9">
+    <body style="background:#f9f9f9">
         
         <nav id="nav" class="navbar-fixed-top navbar-inverse" style="opacity:0.9; height:8%; ">
             <div class="container-fluid row">

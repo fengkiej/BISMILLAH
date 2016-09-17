@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Sign up</title>
+	<title>Register</title>
 	<link href="css/style2.css" rel='stylesheet' type='text/css' />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -49,7 +49,7 @@
 			<input type="text" name="email" class="email" placeholder="Your Email" required>
 			<input type="password" name="password" class="password" placeholder="Password" required>
 			<input type="password" name="password_confirmation" class="password" placeholder="Confirm Password" required>											
-			<input type="submit" value="SIGN UP">
+			<input type="submit" value="REGISTER">
 		</form>
 	</div>
 	</center>
