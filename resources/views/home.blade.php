@@ -1,43 +1,51 @@
 @extends('layouts.master')
 
 @section('head')
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/chocolat.css">
-        <link rel='stylesheet' type='text/css' href="css/style3.css"/>  
-        <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' type='text/css'>
-@endsection
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //Meta-Tags -->
+
+	<!-- Custom-Stylesheet-Links -->
+		<!-- Bootstrap-CSS --> 		<link rel="stylesheet" href="css/bootstrap.min.css" 	type="text/css" media="all">
+		<!-- Index-Page-CSS --> 	<link rel="stylesheet" href="css/styleHomeMin.css" 			type="text/css" media="all">
+		<!-- Gallery-Popup-CSS --> 	<link rel="stylesheet" href="css/chocolat.css" 		type="text/css" media="all">
+	<!-- //Custom-Stylesheet-Links -->
+
+	<!-- Web-Fonts -->
+		<!-- Body-Font --> <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' type='text/css'>
+	<!-- //Web-Fonts -->
 
 @section('title', 'Home')
 
 @section('content')
-	
+
 	<!-- Header -->
 	<div class="header" id="home">
-
+	<div style="position: absolute; z-index:1003;"><img style="margin-left:35%;margin-top:10%;width:30%;" src="images/QRIM.png"></div>
 		<div class="slider-info">
 			<div class="logo">
-				<a href="#">HITECH INFO</a>
+				<a href="#">Q-RIM</a>
 			</div>
 		</div>
 
 		<div class="slider">
 			<!-- Slider1 -->
+
 			<div class="slider-1">
 				<ul class="rslides" id="slider1">
 					<li>
-						<img src="images/slide-1.jpg" alt="Hitech Info">
+						<img src="images/bapakbapak.jpg" alt="Hitech Info">
 					</li>
 					<li>
-						<img src="images/slide-2.jpg" alt="Hitech Info">
+						<img src="images/ibuibu.jpg" alt="Hitech Info">
 					</li>
 					<li>
-						<img src="images/slide-3.jpg" alt="Hitech Info">
+						<img src="images/gerendong.jpg" alt="Hitech Info">
 					</li>
 					<li>
-						<img src="images/slide-4.jpg" alt="Hitech Info">
+						<img src="images/ukm.jpg" alt="Hitech Info">
 					</li>
 					<li>
-						<img src="images/slide-5.jpg" alt="Hitech Info">
+						<img src="images/ukm2.jpg" alt="Hitech Info">
 					</li>
 				</ul>
 			</div>
@@ -54,17 +62,17 @@
 	<div class="about" id="about">
 		<div class="container">
 
-			<h1>ABOUT US</h1>
+			<h1>TENTANG KAMI</h1>
 			<div class="heading-underline">
 				<div class="h-u1"></div><div class="h-u2"></div><div class="h-u3"></div><div class="clearfix"></div>
 			</div>
 
 			<div class="col-md-6 col-sm-6 about-details">
 				<div class="about-image">
-					<img src="images/mac.png" alt="Hitech Info">
+					<img src="images/laptop.png" alt="Hitech Info">
 				</div>
 				<div class="about-info">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Kami sekumpulan Mahasiswa yang punya banyak mimpi untuk membuat menjadi lebih baik. Tim kami terdiri dari 3 orang Mahasasiwa asa Yogyakarta. Cek alasan kami membuat projek ini di tombol dibawah data kemampuan kami</p>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -73,42 +81,69 @@
 			<div class="col-md-6 col-sm-6 skills">
 
 				<div id="about-us" class="parallax">
-					<h2>OUR SKILLS</h2>
+					<h2>KEAHLIAN</h2>
 				<div class="heading-underline">
 					<div class="h-u1"></div><div class="h-u2"></div><div class="h-u3"></div><div class="clearfix"></div>
 				</div>
 					<div class="our-skills wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
 						<div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-							<p class="lead">LOREM IPSUM</p>
+							<p class="lead">LUCK</p>
 							<div class="progress">
 								<div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar" aria-valuetransitiongoal="90">90%</div>
 							</div>
 						</div>
 						<div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="400ms">
-							<p class="lead">DOLORES AMET</p>
+							<p class="lead">SKILL</p>
 							<div class="progress">
-								<div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar" aria-valuetransitiongoal="80">80%</div>
+								<div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar" aria-valuetransitiongoal="10">10%</div>
 							</div>
 						</div>
 						<div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
-							<p class="lead">CONSECTETUR</p>
+							<p class="lead">POWER OF WILL</p>
 							<div class="progress">
 								<div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar" aria-valuetransitiongoal="70">70%</div>
 							</div>
 						</div>
 						<div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-							<p class="lead">ADIPISICING</p>
+							<p class="lead">PLEASURE</p>
 							<div class="progress">
-								<div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar" aria-valuetransitiongoal="75">75%</div>
+								<div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar" aria-valuetransitiongoal="50">50%</div>
 							</div>
 						</div>
 						<div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-							<p class="lead">EXERCITATION</p>
+							<p class="lead">REASON TO REMEMBER THE NAME</p>
 							<div class="progress">
-								<div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar" aria-valuetransitiongoal="85">85%</div>
+								<div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar" aria-valuetransitiongoal="100">100%</div>
 							</div>
 						</div>
 					</div>
+
+					<!-- Tooltip -->
+					<button class="btn btn-primary" data-toggle="modal" data-target="#myModal" >JELAJAHI<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
+
+					<div class="tooltip-content">
+
+						<div class="modal fade features-modal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+							<div class="modal-dialog modal-lg">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+										<h4 class="modal-title">Q-RIM INFO</h4>
+									</div>
+									<div class="modal-body">
+										<img src="images/ukm3.jpg" alt="Q-rim Info">
+										<p>Ide kami terinspirasi oleh pesatnya perkembangan media sosial di negeri ini akan tetapi para penggiat usaha masih belum memanfaatkan potensi terbesar dari perkembangan zaman ini. Setelah melakukan komunikasi dengan beberapa penggiat UKM maka kami menyimpulkan solusi terbaik untuk memecahkan masalah ini.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<script>
+							$('#myModal').modal('');
+						</script>
+
+					</div>
+					<!-- //Tooltip -->
 
 				</div>
 
@@ -126,7 +161,7 @@
 	<div class="services" id="services">
 		<div class="container">
 
-			<h3>SERVICES</h3>
+			<h3>LAYANAN</h3>
 			<div class="heading-underline">
 				<div class="h-u1"></div><div class="h-u2"></div><div class="h-u3"></div><div class="clearfix"></div>
 			</div>
@@ -134,18 +169,18 @@
 			<div class="service-grids">
 				<div class="col-md-4 col-sm-4 service-grid service-grid-1">
 					<img src="images/service-1.png" alt="Hitech Info">
-					<h4>LOREM IPSUM</h4>
-					<p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+					<h4>ORGANISASI</h4>
+					<p>Dapat Menghubungkan dengan mudah dengan para penggiat UKM yang menggunakan aplikasi kami. Tak lupa juga aspek sosial kami terapkan pada fitur chat yang ada</p>
 				</div>
 				<div class="col-md-4 col-sm-4 service-grid service-grid-2">
 					<img src="images/service-2.png" alt="Hitech Info">
-					<h4>DOLORES AMET</h4>
-					<p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+					<h4>CANGGIH</h4>
+					<p>Tidak perlu lagi repot - repot untuk kesana kemari datang ke ATM. Hanya dengan satu tombol anda bisa mengirimkan dana kepada para UKM dan pemberi jasa</p>
 				</div>
 				<div class="col-md-4 col-sm-4 service-grid service-grid-3">
 					<img src="images/service-3.png" alt="Hitech Info">
-					<h4>CONSECTETURS</h4>
-					<p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+					<h4>JUARA</h4>
+					<p>Dengan berbagai fitur yang disediakan, kemudahan dalam penggunaan, dan yang terakhir ringannya proses di dalam web kami membuat aplikasi kami berpotensi menjadi Juara</p>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -154,155 +189,17 @@
 	</div>
 	<!-- //Services -->
 
-
-
-				<!-- Popup-Box -->
-				<div id="popup">
-					<div id="small-dialog" class="mfp-hide">
-						<div class="pop_up">
-							<div class="payment-online-form-left">
-								<form>
-									<h4><span class="shipping"> </span>Customer Details</h4>
-									<ul>
-										<li><input class="text-box-dark" type="text" value="First Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'First Name';}"></li>
-										<li><input class="text-box-dark" type="text" value="Last Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Last Name';}"></li>
-									</ul>
-									<ul>
-										<li><input class="text-box-dark" type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}"></li>
-										<li><input class="text-box-dark" type="text" value="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}"></li>
-									</ul>
-									<div class="clear"></div>
-									<h4 class="paymenthead"><span class="payment"></span>Payment Details</h4>
-									<div class="clear"></div>
-									<ul class="payment-type">
-										<li><span class="col_checkbox">
-												<input id="3" class="css-checkbox1" type="checkbox">
-												<label for="3" class="css-label1"></label>
-												<a class="visa" href="#"></a>
-											</span>
-										</li>
-										<li>
-											<span class="col_checkbox">
-												<input id="4" class="css-checkbox2" type="checkbox">
-												<label for="4" class="css-label2"></label>
-												<a class="paypal" href="#"></a>
-											</span>
-										</li>
-									</ul>
-									<ul>
-										<li><input class="text-box-dark" type="text" value="Card Number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Card Number';}"></li>
-										<li><input class="text-box-dark" type="text" value="Name on card" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name on card';}"></li>
-									</ul>
-									<ul>
-										<li><input class="text-box-light hasDatepicker" type="text" id="datepicker" value="Expiration Date" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Expiration Date';}"><em class="pay-date"> </em></li>
-										<li><input class="text-box-dark" type="text" value="Security Code" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Security Code';}"></li>
-									</ul>
-									<ul class="payment-sendbtns">
-										<li><input type="reset" value="Reset"></li>
-										<li><a href="#" class="order">Process order</a></li>
-									</ul>
-									<div class="clear"></div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-				<button title="Close (Esc)" type="button" class="mfp-close">×</button>
-				<!-- //Popup-Box -->
-
-			</div>
-			
-		</div>
-	</div>
-	<!-- //Pricing -->
-
-
-
-	<!-- Team -->
-	<div class="team" id="team">
-		<div class="container">
-
-			<h3>BEHIND OUR SUCCESS</h3>
-			<div class="heading-underline">
-				<div class="h-u1"></div><div class="h-u2"></div><div class="h-u3"></div><div class="clearfix"></div>
-			</div>
-			<p class="team-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-			<div class="team-grids">			
-				<div class="ch-grid">
-					<div class="col-md-3 col-sm-3 team-grid team-grid1">
-						<div class="ch-item ch-img-1">
-							<div class="ch-info-wrap">
-								<div class="ch-info">
-									<div class="ch-info-front ch-img-1"></div>
-									<div class="ch-info-back">
-										<h4>RICHARD HAMMOND</h4>
-										<p>CEO</p>
-									</div>	
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-3 team-grid team-grid2">
-						<div class="ch-item ch-img-2">
-							<div class="ch-info-wrap">
-								<div class="ch-info">
-									<div class="ch-info-front ch-img-2"></div>
-									<div class="ch-info-back">
-										<h4>RACHEL JONES</h4>
-										<p>CTO</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-3 team-grid team-grid3">
-						<div class="ch-item ch-img-3">
-							<div class="ch-info-wrap">
-								<div class="ch-info">
-									<div class="ch-info-front ch-img-3"></div>
-									<div class="ch-info-back">
-										<h4>KRISTEN BELL</h4>
-										<p>CFO</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-3 team-grid team-grid4">
-						<div class="ch-item ch-img-4">
-							<div class="ch-info-wrap">
-								<div class="ch-info">
-									<div class="ch-info-front ch-img-4"></div>
-									<div class="ch-info-back">
-										<h4>WILLIAM HANNAH</h4>
-										<p>CSO</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-			
-		</div>
-	</div>
-	<!-- //Team -->
-
-
-
 	<!-- Projects -->
 	<div class="projects" id="projects">
 
-		<h3>OUR LATEST PROJECTS</h3>
+		<h3>PROJEK TERBARU KAMI</h3>
 		<div class="heading-underline">
 			<div class="h-u1"></div><div class="h-u2"></div><div class="h-u3"></div><div class="clearfix"></div>
 		</div>
 
 		<div class="gallery-items">
 			<div class="col-md-2 col-sm-2 gallery-item gallery-item-1">
-				<a class="example-image-link" href="images/gallery-1-big.jpg" data-lightbox="example-set" data-title="">
+				<a class="example-image-link" href="images/gallery-1.jpg" data-lightbox="example-set" data-title="">
 					<div class="grid">
 						<figure class="effect-apollo">
 							<img src="images/gallery-1.jpg" alt="Hitech Info">
@@ -312,7 +209,7 @@
 				</a>
 			</div>
 			<div class="col-md-2 col-sm-2 gallery-item gallery-item-2">
-				<a class="example-image-link" href="images/gallery-2-big.jpg" data-lightbox="example-set" data-title="">
+				<a class="example-image-link" href="images/gallery-2.jpg" data-lightbox="example-set" data-title="">
 					<div class="grid">
 						<figure class="effect-apollo">
 							<img src="images/gallery-2.jpg" alt="Hitech Info">
@@ -322,7 +219,7 @@
 				</a>
 			</div>
 			<div class="col-md-2 col-sm-2 gallery-item gallery-item-3">
-				<a class="example-image-link" href="images/gallery-3-big.jpg" data-lightbox="example-set" data-title="">
+				<a class="example-image-link" href="images/gallery-3.jpg" data-lightbox="example-set" data-title="">
 					<div class="grid">
 						<figure class="effect-apollo">
 							<img src="images/gallery-3.jpg" alt="Hitech Info">
@@ -332,7 +229,7 @@
 				</a>
 			</div>
 			<div class="col-md-2 col-sm-2 gallery-item gallery-item-4">
-				<a class="example-image-link" href="images/gallery-4-big.jpg" data-lightbox="example-set" data-title="">
+				<a class="example-image-link" href="images/gallery-4.jpg" data-lightbox="example-set" data-title="">
 					<div class="grid">
 						<figure class="effect-apollo">
 							<img src="images/gallery-4.jpg" alt="Hitech Info">
@@ -342,7 +239,7 @@
 				</a>
 			</div>
 			<div class="col-md-2 col-sm-2 gallery-item gallery-item-5">
-				<a class="example-image-link" href="images/gallery-5-big.jpg" data-lightbox="example-set" data-title="">
+				<a class="example-image-link" href="images/gallery-5.jpg" data-lightbox="example-set" data-title="">
 					<div class="grid">
 						<figure class="effect-apollo">
 							<img src="images/gallery-5.jpg" alt="Hitech Info">
@@ -352,7 +249,7 @@
 				</a>
 			</div>
 			<div class="col-md-2 col-sm-2 gallery-item gallery-item-6">
-				<a class="example-image-link" href="images/gallery-6-big.jpg" data-lightbox="example-set" data-title="">
+				<a class="example-image-link" href="images/gallery-6.jpg" data-lightbox="example-set" data-title="">
 					<div class="grid">
 						<figure class="effect-apollo">
 							<img src="images/gallery-6.jpg" alt="Hitech Info">
@@ -362,7 +259,7 @@
 				</a>
 			</div>
 			<div class="col-md-2 col-sm-2 gallery-item gallery-item-7">
-				<a class="example-image-link" href="images/gallery-7-big.jpg" data-lightbox="example-set" data-title="">
+				<a class="example-image-link" href="images/gallery-7.jpg" data-lightbox="example-set" data-title="">
 					<div class="grid">
 						<figure class="effect-apollo">
 							<img src="images/gallery-7.jpg" alt="Hitech Info">
@@ -372,7 +269,7 @@
 				</a>
 			</div>
 			<div class="col-md-2 col-sm-2 gallery-item gallery-item-8">
-				<a class="example-image-link" href="images/gallery-8-big.jpg" data-lightbox="example-set" data-title="">
+				<a class="example-image-link" href="images/gallery-8.jpg" data-lightbox="example-set" data-title="">
 					<div class="grid">
 						<figure class="effect-apollo">
 							<img src="images/gallery-8.jpg" alt="Hitech Info">
@@ -382,7 +279,7 @@
 				</a>
 			</div>
 			<div class="col-md-2 col-sm-2 gallery-item gallery-item-9">
-				<a class="example-image-link" href="images/gallery-9-big.jpg" data-lightbox="example-set" data-title="">
+				<a class="example-image-link" href="images/gallery-9.jpg" data-lightbox="example-set" data-title="">
 					<div class="grid">
 						<figure class="effect-apollo">
 							<img src="images/gallery-9.jpg" alt="Hitech Info">
@@ -392,7 +289,7 @@
 				</a>
 			</div>
 			<div class="col-md-2 col-sm-2 gallery-item gallery-item-10">
-				<a class="example-image-link" href="images/gallery-10-big.jpg" data-lightbox="example-set" data-title="">
+				<a class="example-image-link" href="images/gallery-10.jpg" data-lightbox="example-set" data-title="">
 					<div class="grid">
 						<figure class="effect-apollo">
 							<img src="images/gallery-10.jpg" alt="Hitech Info">
@@ -402,7 +299,7 @@
 				</a>
 			</div>
 			<div class="col-md-2 col-sm-2 gallery-item gallery-item-11">
-				<a class="example-image-link" href="images/gallery-11-big.jpg" data-lightbox="example-set" data-title="">
+				<a class="example-image-link" href="images/gallery-11.jpg" data-lightbox="example-set" data-title="">
 					<div class="grid">
 						<figure class="effect-apollo">
 							<img src="images/gallery-11.jpg" alt="Hitech Info">
@@ -412,7 +309,7 @@
 				</a>
 			</div>
 			<div class="col-md-2 col-sm-2 gallery-item gallery-item-12">
-				<a class="example-image-link" href="images/gallery-12-big.jpg" data-lightbox="example-set" data-title="">
+				<a class="example-image-link" href="images/gallery-12.jpg" data-lightbox="example-set" data-title="">
 					<div class="grid">
 						<figure class="effect-apollo">
 							<img src="images/gallery-12.jpg" alt="Hitech Info">
@@ -427,7 +324,77 @@
 	</div>
 	<!-- //Projects -->
 
+	<!-- Team -->
+	<div class="team" id="team">
+		<div class="container">
 
+			<h3>DIBALIK KESUKSESAN KAMI</h3>
+			<div class="heading-underline">
+				<div class="h-u1"></div><div class="h-u2"></div><div class="h-u3"></div><div class="clearfix"></div>
+			</div>
+			<p class="team-p">Alasan dibalik terwujudnya projek QRIM dari kami, terdapat juga pekerja keras dengan tekad yang kuat dan motivasi yang tinggi untuk menciptakan Aplikasi yang diharapkan nantinya dapat bermanfaat bagi pengguna umum khususnya para penggiata UKM.</p>
+
+			<div class="team-grids">			
+				<div class="ch-grid">
+					<div class="col-md-3 col-sm-3 team-grid team-grid1">
+						<div class="ch-item ch-img-1">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-1"></div>
+									<div class="ch-info-back">
+										<h4>FENGKIE JUNIS</h4>
+										<p>CEO</p>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 team-grid team-grid2">
+						<div class="ch-item ch-img-2">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-2"></div>
+									<div class="ch-info-back">
+										<h4>CANDRA GCTK</h4>
+										<p>LORD</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 team-grid team-grid3">
+						<div class="ch-item ch-img-3">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-3"></div>
+									<div class="ch-info-back">
+										<h4>M RAIHAN W</h4>
+										<p>AVATAR</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 team-grid team-grid4">
+						<div class="ch-item ch-img-4">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img-4"></div>
+									<div class="ch-info-back">
+										<h4>M NIRWANDHA</h4>
+										<p>EX-ANGGOTA</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<!-- //Team -->
 
 	<!-- Testimonial -->
 	<div class="testimonial" id="testimonial">
@@ -442,24 +409,24 @@
 			<div class="slider2">
 				<ul class="rslides" id="slider2">
 					<li>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-						<h4>John Doe</h4>
+						<p>Tidak perlu dipungkiri lagi bahwa kita hidup di zaman dimana teknologi sangatlah akrab dengan kehidupan kita. Hampir seluruh aspek kehidupan masyarakat tidak lepas dari dunia IT. Mulai dari bisnis, pendidikan, kesehatan,dll. IT dan Qrim selalu memiliki peran yang kuat didalamnya.</p>
+						<h4>Irfan M -CEO OmahTI</h4>
 					</li>
 					<li>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-						<h4>Jane Doe</h4>
+						<p>Perjuanganku lebih mudah karena mengusir penjajah, tetapi perjuanganmu lebih sulit karena melawan bangsamu sendirip>
+						<h4>Ir. Soekarno -Presiden Indonesia</h4>
 					</li>
 					<li>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
 						<h4>Jack Doe</h4>
 					</li>
 					<li>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-						<h4>Jill Doe</h4>
+						<p>sebuah mesin mampu setara dengan hasil kerja ribuan manusia. Tapi mesin belum mampu sesempurnah manusia, bahkan belum mampu menyerupai kesempurnaan mahluk hidup sederhana.p>
+						<h4>Anonnymous</h4>
 					</li>
 					<li>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-						<h4>James Doe</h4>
+						<p>Saya sangat meyakini bahwa setiap hal yang meningkatkan komunikasi memiliki efek yang amat besar dalam hal bagaimana orang dapat belajar satu sama lainnya, dan bagaimana mereka dapat mencapai kebebasan yang mereka inginkan</p>
+						<h4>Bill Gates -Microsoft Founder</h4>
 					</li>
 				</ul>
 			</div>
@@ -500,29 +467,29 @@
 			<div class="slider3">
 				<ul class="rslides" id="slider3">
 					<li>
-						<img src="images/follow-1.png" alt="Hitech Info">
-						<p>Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit. Lorem ipsum dolor sit amet, consectetur adipi.</p>
-						<a href="#">Follow Us : @example_company</a>
+						<img src="images/follow-1.png" alt="Qrim Info">
+						<p>Tetap ikuti kontak media sosial kami yang lain.</p>
+						<a href="#">Follow Us : @colu_hack</a>
 					</li>
 					<li>
-						<img src="images/follow-2.png" alt="Hitech Info">
-						<p>Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit. Lorem ipsum dolor sit amet, consectetur adipi.</p>
-						<a href="#">Follow Us : @example_company</a>
+						<img src="images/follow-2.png" alt="Qrim Info">
+						<p>Tetap ikuti kontak media sosial kami yang lain.</p>
+						<a href="#">Follow Us : @colu_hack</a>
 					</li>
 					<li>
-						<img src="images/follow-3.png" alt="Hitech Info">
-						<p>Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit. Lorem ipsum dolor sit amet, consectetur adipi.</p>
-						<a href="#">Follow Us : @example_company</a>
+						<img src="images/follow-3.png" alt="Qrim Info">
+						<p>Tetap ikuti kontak media sosial kami yang lain.</p>
+						<a href="#">Follow Us : @colu_hack</a>
 					</li>
 					<li>
-						<img src="images/follow-4.png" alt="Hitech Info">
-						<p>Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit. Lorem ipsum dolor sit amet, consectetur adipi.</p>
-						<a href="#">Follow Us : @example_company</a>
+						<img src="images/follow-4.png" alt="Qrim Info">
+						<p>Tetap ikuti kontak media sosial kami yang lain.</p>
+						<a href="#">Follow Us : @colu_hack</a>
 					</li>
 					<li>
-						<img src="images/follow-5.png" alt="Hitech Info">
-						<p>Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit. Lorem ipsum dolor sit amet, consectetur adipi.</p>
-						<a href="#">Follow Us : @example_company</a>
+						<img src="images/follow-5.png" alt="Qrim Info">
+						<p>Tetap ikuti kontak media sosial kami yang lain.</p>
+						<a href="#">Follow Us : @colu_hack</a>
 					</li>
 				</ul>
 			</div>
@@ -553,20 +520,15 @@
 	<!-- //Social -->
 
 
-
-	<!-- Copyright -->
-	<div class="copyright">
-		<p>&copy; 2016 Hitech Info. All Rights Reserved.</p>
-	</div>
-	<!-- //Copyright -->
-
-
-
 	<!-- Custom-JavaScript-File-Links -->
+
+		<!-- Supportive-JavaScript --> 			 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<!-- Necessary-JS-File-For-Bootstrap --> <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
 		<!-- Slider-JavaScript -->
 			<script src="js/responsiveslides.min.js"></script>
 			<script>
-				jQuery(function ($) {
+				$(function () {
 					$("#slider1, #slider2, #slider3").responsiveSlides({
 						auto: true,
 						nav: true,
