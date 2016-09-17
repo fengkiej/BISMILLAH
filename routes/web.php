@@ -32,7 +32,11 @@ Route::get('/chartdata', 'ChartController@chartData');
 Route::get('/home', 'HomeController@index');
 
 Route::get('/login', function(){
-	return view('Login');
+	return view('login');
+});
+
+Route::get('/register', function(){
+	return view('register');
 });
 
 Route::get('/transfer', function(){
