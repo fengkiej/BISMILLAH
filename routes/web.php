@@ -24,13 +24,15 @@ Route::get('/dashboard', function(){
 });
 
 Route::post('/user/{user}', 'TransactionController@transfer');
+Route::post('/confirm/{transactionId}', 'TransactionController@confirmRekber');
+Route::post('/bank/confirm/{transactionId}', 'TransactionController@confirmBankTransaction');
 
 Auth::routes();
-
+Route::get('/chartdata', 'ChartController@chartData');
 Route::get('/home', 'HomeController@index');
 
 Route::get('/login', function(){
-	return view('login');
+	return view('Login');
 });
 
 Route::get('/transfer', function(){
