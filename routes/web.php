@@ -28,3 +28,11 @@ Route::post('/user/{user}', 'TransactionController@transfer');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/login', function(){
+	return view('login');
+});
+
+Route::get('/transfer', function(){
+	return view('transfer');
+});
