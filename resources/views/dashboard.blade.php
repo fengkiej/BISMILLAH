@@ -6,7 +6,12 @@
 			padding: 8px;
 			border:1px solid white;
 		}
+		td{
+			white-space: nowrap;
+		}
 		table{
+			overflow-x: scroll;
+			overflow-y: scroll;
 			border:1px solid white;
 			border-collapse: collapse;
 		}
@@ -33,7 +38,7 @@
 			</div>
 		</div>
 
-		<table style="width:95%; margin-left:auto; margin-right:auto; overflow-x: scroll; overflow-y: scroll; margin-top: 16px">
+		<table style="width:95%; margin-left:auto; margin-right:auto; margin-top: 16px">
 			<tr>
 				<td>Time Stamp</td>
 				<td>From</td>
@@ -130,5 +135,5 @@
 
 	<script src="js/canvasjs.min.js"></script>
 	<script src="js/jquery.canvasjs.min.js"></script>
-	
+
 @endsection
