@@ -6,7 +6,7 @@
 
 	<!-- Custom-Stylesheet-Links -->
 		<!-- Bootstrap-CSS --> 		<link rel="stylesheet" href="css/bootstrap.min.css" 	type="text/css" media="all">
-		<!-- Index-Page-CSS --> 	<link rel="stylesheet" href="css/styleHomeMin.css" 			type="text/css" media="all">
+		<!-- Index-Page-CSS --> 	<link rel="stylesheet" href="css/styleHome.css" 			type="text/css" media="all">
 		<!-- Gallery-Popup-CSS --> 	<link rel="stylesheet" href="css/chocolat.css" 		type="text/css" media="all">
 	<!-- //Custom-Stylesheet-Links -->
 
