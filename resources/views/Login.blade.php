@@ -4,20 +4,20 @@
 	<link href="css/styleLogin.css" rel='stylesheet' type='text/css' />
 @endsection
 
-@section('title', 'Home')
+@section('title', 'Login')
 
 @section('content')
 	<h1>Login & Sign up Forms</h1>
-<div class="main">
-                <div class="login-top left">
-			         <div class="social_icons">
-						<!-- Facebook -->
-						<div class="slide-social w3l">
-						<a href="#">
-							<div class="button">Facebook</div>
-							<div class="facebook icon"> <i class="facebook"></i> </div>
-							<div class="facebook slide">
-								<p>Facebook</p>
+	<div class="main">
+        <div class="login-top left">
+			<div class="social_icons">
+				<!-- Facebook -->
+				<div class="slide-social w3l">
+				<a href="#">
+					<div class="button">Facebook</div>
+					<div class="facebook icon"> <i class="facebook"></i> </div>
+					<div class="facebook slide">
+						<p>Facebook</p>
 							</div>
 							<div class="clear"></div>
 							</a>

@@ -4,12 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/custom.css">
-        <link href="css/stylelogin.css" rel='stylesheet' type='text/css' />    
+        <link href="css/stylelogin.css" rel='stylesheet' type='text/css'/>    
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,500,500i,700,900|Sail" rel="stylesheet"> 
         <link href="css/styleTransfer.css" rel="stylesheet" type="text/css" media="all" />
-        <script type="text/javascript" src="js/jquery.min.js"></script>
+
         @yield('head')
 
         <title>Qrim - @yield('title')</title>
@@ -33,7 +34,7 @@
             </div>
         </nav>
 
-        <div id="sideNav" class="sidebar">
+        <div id="sideNav" class="sidebar" style="opacity:0.9;">
             <a href="#">My Profile</a>
             <a href="#">Dashboard</a>
             <a href="#">Setting</a>
@@ -47,15 +48,16 @@
         <script>
             function toggleNav() {
                 var element = document.getElementById('sideNav');
-                if(element.style.width == "40%"){
+                if(element.style.width == "200px"){
                     element.style.width = "0px";
                 } else{
-                    element.style.width = "40%"
+                    element.style.width = "200px"
                 }
             }
         </script>
 
         <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="bootstrap/jquery/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
     </body>
 </html>

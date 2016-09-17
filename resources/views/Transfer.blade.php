@@ -5,77 +5,76 @@
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 @endsection
 
-@section('title', 'Home')
+@section('title', 'Transfer')
 
 @section('content')
-<div class="main" style="background-color: lightblue">
+	<div class="main" style="background-color: lightblue">
 		<h1>Detail Transfer</h1>
 		<div class="content">
 			
-			<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
-					<script type="text/javascript">
-						$(document).ready(function () {
-							$('#horizontalTab').easyResponsiveTabs({
-								type: 'default', //Types: default, vertical, accordion           
-								width: 'auto', //auto or any width like 600px
-								fit: true   // 100% fit in a container
-							});
-						});
+		<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('#horizontalTab').easyResponsiveTabs({
+					type: 'default', //Types: default, vertical, accordion           
+					width: 'auto', //auto or any width like 600px
+					fit: true   // 100% fit in a container
+				});
+			});
+		</script>
+					
+		<!-- Nominal -->
+		<div class="resp-tabs-container" style="margin-bottom:15px;">
+		<h3 style="font-size: 26px;text-align: center;margin-bottom: 15px;color: #3AD5A0;font-weight: 500;font-family: 'Alegreya Sans', sans-serif;">Nominal Transfer</h3>
+		<input type="text" value="Rp." style="display: block; width: 100%; margin: 0px;">
+	</div>
 
-					</script>
-					<!-- Nominal -->
-						<div class="resp-tabs-container" style="margin-bottom:15px;">
-							<h3 style="font-size: 26px;text-align: center;margin-bottom: 15px;color: #3AD5A0;font-weight: 500;font-family: 'Alegreya Sans', sans-serif;
-">Nominal Transfer</h3>
-							<input type="text" value="Rp." style="display: block; width: 100%; margin: 0px;">
-						</div>
-						<div class="sap_tabs"> 
-						<!--Tabel Pilihan  -->
-							<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
-								<div class="pay-tabs">
-									<h2>Pilih Metode Pembayaran</h2>
-									  <ul class="resp-tabs-list">
-										  <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span><label class="pic1"></label>Credit Card</span></li>
-										  <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span><label class="pic3"></label>Net Banking</span></li>
-										  <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span><label class="pic4"></label>DompetQ</span></li> 
-										  <li class="resp-tab-item" aria-controls="tab_item-3" role="tab"><span><label class="pic2"></label>Debit Card</span></li>
-										  <div class="clear"></div>
-									  </ul>	
-								</div>
-								<div class="resp-tabs-container">
-									<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
-										<div class="payment-info">
-											<h3>Personal Information</h3>
-											<form>
-												<div class="tab-for">				
-													<h5>EMAIL ADDRESS</h5>
-														<input type="text" value="">
-													<h5>FIRST NAME</h5>													
-														<input type="text" value="">
-												</div>			
-											</form>
-											<h3 class="pay-title">Credit Card Info</h3>
-											<form>
-												<div class="tab-for">				
-													<h5>NAME ON CARD</h5>
-														<input type="text" value="">
-													<h5>CARD NUMBER</h5>													
-														<input class="pay-logo" type="text" value="0000-0000-0000-0000" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '0000-0000-0000-0000';}" required="">
-												</div>	
-												<div class="transaction">
-													<div class="tab-form-left user-form">
-														<h5>EXPIRATION</h5>
-															<ul>
-																<li>
-																	<input type="number" class="text_box" type="text" value="6" min="1" />	
-																</li>
-																<li>
-																	<input type="number" class="text_box" type="text" value="1988" min="1" />	
-																</li>
-																
-															</ul>
-													</div>
-													<div class="tab-form-right user-form-rt">
+	<div class="sap_tabs"> 
+		<!--Tabel Pilihan  -->
+		<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+		<div class="pay-tabs">
+			<h2>Pilih Metode Pembayaran</h2>
+				<ul class="resp-tabs-list">
+					<li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span><label class="pic1"></label>Credit Card</span></li>
+					<li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span><label class="pic3"></label>Net Banking</span></li>
+					<li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span><label class="pic4"></label>DompetQ</span></li> 
+					<li class="resp-tab-item" aria-controls="tab_item-3" role="tab"><span><label class="pic2"></label>Debit Card</span></li>
+					<div class="clear"></div>
+				</ul>	
+			</div>
+			<div class="resp-tabs-container">
+				<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+				<div class="payment-info">
+					<h3>Personal Information</h3>
+					<form>
+						<div class="tab-for">				
+							<h5>EMAIL ADDRESS</h5>
+							<input type="text" value="">
+							<h5>FIRST NAME</h5>													
+							<input type="text" value="">
+						</div>			
+					</form>
+					<h3 class="pay-title">Credit Card Info</h3>
+					<form>
+						<div class="tab-for">				
+							<h5>NAME ON CARD</h5>
+							<input type="text" value="">
+							<h5>CARD NUMBER</h5>													
+							<input class="pay-logo" type="text" value="0000-0000-0000-0000" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '0000-0000-0000-0000';}" required="">
+						</div>	
+						<div class="transaction">
+							<div class="tab-form-left user-form">
+								<h5>EXPIRATION</h5>
+								<ul>
+									<li>
+										<input type="number" class="text_box" type="text" value="6" min="1" />	
+									</li>
+									<li>
+										<input type="number" class="text_box" type="text" value="1988" min="1" />	
+									</li>							
+								</ul>
+							</div>
+							<div class="tab-form-right user-form-rt">
 														<h5>CVV NUMBER</h5>													
 														<input type="text" value="xxxx" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'xxxx';}" required="">
 													</div>

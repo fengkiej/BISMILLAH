@@ -3,6 +3,7 @@
 	display: block;
 }
 .sidebar{
+	z-index: 1;
 	top: 8%;
 	right: 0;
 	height: 100%;
@@ -13,9 +14,10 @@
 	transition: 0.5s;
 }
 .sidebar a{
+	border-bottom: 1px solid gray;
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
-	font-size: 25px;
+	font-size: 3vh;
 	color: #818181;
 	display: block;
 	transition: 0.2s;
@@ -23,7 +25,7 @@
 .sidebar a:hover, .offcanvas a:focus{
 	color: #f1f1f1;
 }
-.header{
+.profile-header{
 	padding-top: 100px;
 	background-image: url("../img/header.png");
 	width: 100%;
@@ -31,10 +33,11 @@
 	position: relative;
 	background-repeat:no-repeat;
 	background-size:cover;
-	border-radius: 15px 50px 0px 0px;
+	border-radius: 50px 50px 0px 0px;
+	margin-bottom: 10vh;
 }
 .card{
-	border-radius: 15px 50px;
+	border-radius: 50px 50px;
 }
 
 #nav ul li{
