@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/profile', function () {
     return view('profile');
+});
+
+Route::get('/', function(){
+	return view('home');
+});
+
+Route::get('/dashboard', function(){
+	return view('dashboard');
 });
