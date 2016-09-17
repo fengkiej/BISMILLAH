@@ -3,7 +3,7 @@
 	display: block;
 }
 .sidebar{
-	z-index: 1;
+	z-index: 3;
 	top: 8%;
 	right: 0;
 	height: 100%;
@@ -49,6 +49,7 @@
 }
 
 .notif{
+	z-index: 4;
 	position: relative;
     display: inline-block;
     cursor: pointer;
@@ -78,6 +79,9 @@
     border-style: solid;
     border-color: transparent transparent white transparent;
 }
+.main{
+	margin-top: 50px;
+}
 
 @media (min-width: 768px){
 	.notif{
@@ -104,5 +108,8 @@
 	}
 	.nav{
 		margin-right: 5px;
+	}
+	.main{
+		margin-top: 0px;
 	}
 }

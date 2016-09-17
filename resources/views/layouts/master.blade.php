@@ -8,14 +8,9 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-<<<<<<< HEAD
+
         <link rel="stylesheet" type="text/css" href="css/custom.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,500,500i,700,900|Sail" rel="stylesheet">
-=======
-        <link rel="stylesheet" type="text/css" href="css/custom.css">  
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,500,500i,700,900|Sail" rel="stylesheet"> 
-        <link href="css/styleTransfer.css" rel="stylesheet" type="text/css" media="all" />
->>>>>>> c8299bb2d653361f69f00074026d4a9698e58551
 
         @yield('head')
 
@@ -31,9 +26,9 @@
                 <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6"></div>
                 <div class=" col-sm-4 col-xs-4 col-md-4 col-lg-4">
                     <ul class="nav navbar-nav navbar-right row">
-                        <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span class="glyphicon glyphicon-menu-hamburger" onclick="toggleNav()"></span></a></li>
-                        <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span class="glyphicon glyphicon-bell popup" onclick="notification()"></span></a></li>
-                        <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+                        <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span id="ham-btn" class="glyphicon glyphicon-menu-hamburger" onclick="toggleNav()"></span></a></li>
+                        <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span id="notif-btn" class="glyphicon glyphicon-bell popup" onclick="notification()"></span></a></li>
+                        <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span id="search-btn" class="glyphicon glyphicon-search" onclick="search()"></span></a></li>
                         <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6"></li>
                     </ul>
                 </div>
@@ -56,7 +51,7 @@
             <a href="#">Logout</a>
         </div>
 
-        <div style="padding-top:8%; padding-bottom:50px;" onclick="init()">
+        <div class="main" style="padding-top:8%; padding-bottom:50px;" onclick="init()">
             @yield('content')
         </div>
 
@@ -90,6 +85,14 @@
                     sidebar.style.width="0px";
                     notif.style.visibility="hidden";
                 }
+            }
+        </script>
+
+        <script>
+            function search(){
+                var ham = document.getElementById('ham-btn');
+                var notif = document.getElementById('notif-btn');
+                var src = document.getElementById('search-btn');
             }
         </script>
     </body>

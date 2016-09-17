@@ -3,7 +3,7 @@
 @section('head')
 		<link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/chocolat.css">
-        <link href="css/style3.css" rel='stylesheet' type='text/css'/>  
+        <link rel='stylesheet' type='text/css' href="css/style3.css"/>  
         <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' type='text/css'>
 @endsection
 
