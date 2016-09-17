@@ -38,7 +38,7 @@
 			</div>
 		</div>
 
-		<table style="width:95%; margin-left:auto; margin-right:auto; margin-top: 16px">
+		<table style="width:95%; margin-left:auto; margin-right:auto; margin-top: 16px;">
 			<tr>
 				<td>Time Stamp</td>
 				<td>From</td>
@@ -117,7 +117,7 @@
 		        { x: new Date(2015, 08, 1), y: 410 },
 		        { x: new Date(2015, 09, 1), y: 500 },
 		        { x: new Date(2015, 10, 1), y: 480 },
-		        { x: new Date(2015, 11, 1), y: 510 }
+		        { x: new Date(2015, 11, 1), y: 500 }
 		        
 		        ]
 		      }
