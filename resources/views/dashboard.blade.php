@@ -22,7 +22,7 @@
 @section('title', 'Dashboard')
 
 @section('content')
-	<div class="card" style="text-align: center; margin : 50px 16px 50px 16px; border: 2px solid white;">
+	<div class="card" style="text-align: center; margin : 0px 16px 50px 16px; border: 2px solid white;">
 
 			<div class="profile-header img-responsive">
 				<img src="img/user.png" alt="User" class="img-circle img-responsive" style="width: 20vh; height: 20vh; background-color:#a6a6a6; margin-left:auto; margin-right:auto;">
@@ -39,8 +39,8 @@
 			</div>
 		</div>
 
-		<div style="overflow-x:visible; width:10px; ">
-		<table style="margin-left:auto; margin-top: 16px">
+
+		<table style="width:95%; margin-left:auto; margin-right:auto; margin-top: 16px;">
 			<tr>
 				<td>Time Stamp</td>
 				<td>From</td>
@@ -84,7 +84,6 @@
 				<td>Done</td>
 			</tr>
 		</table>
-		</div>
 
 		<script type="text/javascript">
 			window.onload = function () {
@@ -120,7 +119,7 @@
 		        { x: new Date(2015, 08, 1), y: 410 },
 		        { x: new Date(2015, 09, 1), y: 500 },
 		        { x: new Date(2015, 10, 1), y: 480 },
-		        { x: new Date(2015, 11, 1), y: 510 }
+		        { x: new Date(2015, 11, 1), y: 500 }
 		        
 		        ]
 		      }

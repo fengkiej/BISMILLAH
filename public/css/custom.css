@@ -3,7 +3,7 @@
 	display: block;
 }
 .sidebar{
-	z-index: 1;
+	z-index: 3;
 	top: 8%;
 	right: 0;
 	height: 100%;
@@ -19,7 +19,7 @@
 	border-bottom: 1px solid gray;
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
-	font-size: 3vh;
+	font-size: 2.5vh;
 	color: #818181;
 	display: block;
 	transition: 0.2s;
@@ -42,52 +42,74 @@
 	border-radius: 10px 10px;
 }
 
-.popup {
-    position: relative;
+#nav ul li{
+	font-size: 2.5vh;
+    display: inline-block;
+    float: right;
+}
+
+.notif{
+	z-index: 4;
+	position: relative;
     display: inline-block;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+	border-radius: 8px;
+	padding: 10px 16px 0px 16px;
+	width: 100%;
+	color: black;
+	position: absolute;
+	background-color: white;
 }
-
-/* The actual popup */
-.popup .popuptext {
-    visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
+.notif{
+	visibility: hidden;
+	height: 92vh;
+	top:-10px;
 }
-
-/* Popup arrow */
-.popup .popuptext::after {
-    content: "";
+.notif:after{
+	content: "";
     position: absolute;
-    top: 100%;
-    left: 50%;
+    bottom: 100%;
+    right: 17.5%;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: #555 transparent transparent transparent;
+    border-color: transparent transparent white transparent;
+}
+.main{
+	margin-top: 50px;
 }
 
-/* Toggle this class - hide and show the popup */
-.popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
+@media (min-width: 768px){
+	.notif{
+		top:0px;
+		height: 300px;
+		right:5%;
+	}
+	.notif:after{
+		right:11.5%;
+	}
+	.nav{
+		margin-right: 5px;
+	}
 }
 
-#nav ul li{
-    display: inline-block;
-    float: right;
+@media (min-width: 992px){
+	.notif{
+		top:0px;
+		height: 300px;
+		right:3%;
+	}
+	.notif:after{
+		right:8.5%;
+	}
+	.nav{
+		margin-right: 5px;
+	}
+	.main{
+		margin-top: 0px;
+	}
 }
