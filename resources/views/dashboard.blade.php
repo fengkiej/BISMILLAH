@@ -16,6 +16,7 @@
 			border-collapse: collapse;
 		}
 	</style>
+
 @endsection
 
 @section('title', 'Dashboard')
@@ -37,6 +38,7 @@
 				--><button class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="font-size:1.5vh; border-radius: 7px; background-color: white">TOP-UP</button>
 			</div>
 		</div>
+
 
 		<table style="width:95%; margin-left:auto; margin-right:auto; margin-top: 16px;">
 			<tr>

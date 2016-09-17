@@ -29,7 +29,7 @@
                         <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span class="glyphicon glyphicon-menu-hamburger" onclick="toggleNav()"></span></a></li>
                         <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span class="glyphicon glyphicon-bell popup" onclick="notification()"></span></a></li>
                         <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span class="glyphicon glyphicon-search" onclick="search()"></span></a></li>
-                        <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="position: absolute;">
+                        <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6"">
                             <!-- <a href="">
                                 <input id="search-inp" type="text" name="search" placeholder="search.." style="border: none; border-radius: 10px; width: 100%; vertical-align: middle; float: right; padding-left: 10px; margin-right: 40%;">
                             </a> -->

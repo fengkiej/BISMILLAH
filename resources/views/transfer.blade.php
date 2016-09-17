@@ -3,7 +3,7 @@
 @section('head')
 	<link href="css/styleTransfer.css" rel='stylesheet' type='text/css' />
 	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Cousine:700" rel="stylesheet"> 
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -12,8 +12,8 @@
 @section('title', 'Home')
 
 @section('content')
-<div class="main" style="background-color: lightblue">
-		<h1 style="font-family:'Open Sans'">Detail Transfer</h1>
+<div class="main" style="background-color: #f9f9f9">
+		<h1 style="font-weight: 300;font-family:'Open Sans'; color: #000; font-size:1.7em; margin: 0.3em 0 0 0;">Detail Transfer</h1>
 		<div class="content">
 			
 			<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
