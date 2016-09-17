@@ -42,12 +42,13 @@
 			<!-- Googlde -->
 
 		</div>
-		<form action="#" method="post">
+		<form action="" method="post">
+		{{ csrf_field() }}
 			<input type="text" name="username" class="name" placeholder="Username" required>
 			<input type="text" name="name" class="name" placeholder="Your Name" required>
 			<input type="text" name="email" class="email" placeholder="Your Email" required>
 			<input type="password" name="password" class="password" placeholder="Password" required>
-			<input type="password" name="password" class="password" placeholder="Confirm Password" required>											
+			<input type="password" name="password_confirmation" class="password" placeholder="Confirm Password" required>											
 			<input type="submit" value="SIGN UP">
 		</form>
 	</div>
