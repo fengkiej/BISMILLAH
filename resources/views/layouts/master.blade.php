@@ -3,11 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+<<<<<<< HEAD
         <link rel="stylesheet" type="text/css" href="css/custom.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,500,500i,700,900|Sail" rel="stylesheet">
+=======
+        <link rel="stylesheet" type="text/css" href="css/custom.css">  
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,500,500i,700,900|Sail" rel="stylesheet"> 
+        <link href="css/styleTransfer.css" rel="stylesheet" type="text/css" media="all" />
+>>>>>>> c8299bb2d653361f69f00074026d4a9698e58551
 
         @yield('head')
 
@@ -84,9 +92,5 @@
                 }
             }
         </script>
-
-        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="bootstrap/jquery/jquery.js"></script>
-        <script type="text/javascript" src="js/jquery.min.js"></script>
     </body>
 </html>
