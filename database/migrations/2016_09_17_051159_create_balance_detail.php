@@ -13,7 +13,8 @@ class CreateBalanceDetail extends Migration
      */
     public function up()
     {
-        Schema::table('balance_details', function (Blueprint $table) {
+        Schema::create('balance_details', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('user')->reference('username')->on('users');
             $table->integer('balance');
             $table->timestamps();

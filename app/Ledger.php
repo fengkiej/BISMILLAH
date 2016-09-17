@@ -13,6 +13,6 @@ class Ledger extends Model
      * @var array
      */
     protected $fillable = [
-        'from', 'to', 'nominal'
+        'from', 'to', 'nominal', 'status'
     ];
 }

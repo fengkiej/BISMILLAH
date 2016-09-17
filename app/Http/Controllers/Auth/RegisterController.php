@@ -62,10 +62,27 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
-            'email' => $data['email'],
+            'username' => $data['username'],
+            'address' => "NULL",
+            'rek_name' => "NULL",
+            'rek_number' => 0,
+            'ktp_path' => "NULL",
+            'header_path' => "NULL",
+            'avatar_path' => "NULL",
+            'email' => $data['email'], 
             'password' => bcrypt($data['password']),
         ]);
+        
+        if($user){
+                $balancedetails = new \App\BalanceDetail;
+                $balancedetails->user = $data['username'];
+                $balancedetails->balance = 0;
+                $balancedetails->save();       
+                return $user;
+        } else {
+                return false;
+        }
     }
 }

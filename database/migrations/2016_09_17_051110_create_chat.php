@@ -13,7 +13,7 @@ class CreateChat extends Migration
      */
     public function up()
     {
-        Schema::table('chats', function (Blueprint $table) {
+        Schema::create('chats', function (Blueprint $table) {
             $table->increments('id')->unique;
             $table->string('from')->reference('username')->on('users');
             $table->string('to')->reference('username')->on('users');
