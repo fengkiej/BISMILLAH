@@ -55,7 +55,7 @@
             <a href="#">Logout</a>
         </div>
 
-        <div class="main" style="padding-top:8%; padding-bottom:50px;" onclick="init()">
+        <div style="padding-top:8%; padding-bottom:50px;" onclick="init()">
             @yield('content')
         </div>
 

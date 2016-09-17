@@ -22,11 +22,46 @@
 @section('title', 'Dashboard')
 
 @section('content')
-	<div class="card" style="text-align: center; margin : 0px 16px 50px 16px; border: 2px solid white;">
+
+	<?php
+		$json_string = '';
+
+		$obj = json_decode($json_string, true);
+		print_r($obj['glossary']);
+	?>
+
+	<p id=""tes></p>
+	<script>
+		{
+    var txt = "glossary": {
+        "title": "example glossary",
+		"GlossDiv": {
+            "title": "S",
+			"GlossList": {
+                "GlossEntry": {
+                    "ID": "SGML",
+					"SortAs": "SGML",
+					"GlossTerm": "Standard Generalized Markup Language",
+					"Acronym": "SGML",
+					"Abbrev": "ISO 8879:1986",
+					"GlossDef": {
+                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
+						"GlossSeeAlso": ["GML", "XML"]
+                    },
+					"GlossSee": "markup"
+                }
+            }
+        }
+    }
+}
+	var getElementById('tes').innerHTML = tes;
+	</script>
+
+	<div class="card main" style="text-align: center; border: 2px solid white;">
 
 			<div class="profile-header img-responsive">
 				<img src="img/user.png" alt="User" class="img-circle img-responsive" style="width: 20vh; height: 20vh; background-color:#a6a6a6; margin-left:auto; margin-right:auto;">
-				<div class="glyphicon glyphicon-share-alt" style="position: absolute; top:145px; right: 10px"></div>
+				<div class="glyphicon glyphicon-share-alt _share" style="position: absolute; right: 13px"></div>
 			</div>
 
 			<a style="margin-top:20px; font-size:3.7vh">Qrim.in/user</a> <br>
@@ -134,6 +169,12 @@
 		<div id="chartContainer" style="height: 300px; width: 95%; margin-top:16px; margin-left:auto; margin-right:auto; margin-bottom: 20px;"></div>
 
 	</div>
+
+	<script>
+		function parseJSON(){
+
+		}
+	</script>
 
 	<script src="js/canvasjs.min.js"></script>
 	<script src="js/jquery.canvasjs.min.js"></script>
