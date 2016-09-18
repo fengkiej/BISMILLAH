@@ -25,7 +25,7 @@
 	<div class="card" style="text-align: center; margin : 40px 16px 50px 16px; border: 2px solid white;">
 
 			<div class="profile-header img-responsive" style="margin-top: 20px">
-				<img src="images/team-4.png" alt="User" class="img-circle img-responsive" style="width: 20vh; height: 20vh; background-color:#fff; margin-left:auto; margin-right:auto;">
+				<img src="images/team-6.png" alt="User" class="img-circle img-responsive" style="width: 20vh; height: 20vh; background-color:#fff; margin-left:auto; margin-right:auto;">
 				<div class="glyphicon glyphicon-share-alt" style="position: absolute; top:145px; right: 10px"></div>
 			</div>
 
@@ -41,7 +41,7 @@
 		</div>
 
 
-		<table style="width:95%; overflow-y:hidden; overflow: auto; white-space: nowrap;margin-left:auto; margin-right:auto; margin-top: 16px;">
+		<table style="width:95%; height: 180px; overflow-y:scroll; overflow-x: scroll; white-space: nowrap;margin-left:auto; margin-right:auto; margin-top: 16px;">
 			<tr>
 				<td><b>Time Stamp</b></td>
 				<td><b>From</b></td>

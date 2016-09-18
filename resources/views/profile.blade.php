@@ -9,7 +9,7 @@
 	<div class="card" style="text-align: center; background-color: #fafafa; margin : 50px 10px 50px 10px;">
 		<div style="background-image: "../images/gallery-8.jpg";" class="profile-header img-responsive">
 			<span>
-			<img src="images/team-3.png" alt="User" class="img-circle img-responsive" style="width: 20vh; height: 20vh; background-color:#f6f6f6; margin-left:auto; margin-right:auto;">
+			<img src="images/team-5.png" alt="User" class="img-circle img-responsive" style="width: 20vh; height: 20vh; background-color:#f6f6f6; margin-left:auto; margin-right:auto;">
 			</span>
 		</div>
 		<h3>{{$user[0]['name']}}</h3>

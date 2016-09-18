@@ -48,7 +48,11 @@ Route::get('/{username}/transfer', function($username){
 });
 
 Route::get('/{username}', function ($username) {
-	$user = \App\User::where('username', $username)->get();
-    return view('profile', ['user' => $user]);
+	if($username == \Auth::user()->username){
+		return redirect()->to('/dashboard');
+	} else {
+		$user = \App\User::where('username', $username)->get();
+    	return view('profile', ['user' => $user]);
+    }
 });
 
