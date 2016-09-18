@@ -68,9 +68,9 @@
 				<td>@if($record->status=="DONE")
 						<span style="color: green;">DONE</span>
 					@elseif($record->status=="ONCONFIRMATION")
-						<form action="/confirmbank/{{$record->id}}" method="POST"><button class="btn btn-success" type="submit">Confirm</button></form>
+						<form action="/bank/confirm/{{$record->id}}" method="POST"><button class="btn btn-success" type="submit">Confirm</button></form>
 					@elseif($username == $record->from && $record->status == "PENDING")
-						<form action="/confirmrekber/{{$record->id}}" method="POST"><button class="btn btn-success" type="submit">Confirm</button></form>
+						<form action="/confirm/{{$record->id}}" method="POST"><button class="btn btn-success" type="submit">Confirm</button></form>
 					@elseif($record->status == "PENDING")
 						<span style="color: yellow;">PENDING</span>
 					@endif</td>
