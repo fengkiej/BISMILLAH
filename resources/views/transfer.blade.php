@@ -93,10 +93,13 @@
 								@else
 								<form action="/send/{{$username}}" method="POST">
 								{{ csrf_field() }}
-								<input type="hidden" name="transferMode" value=1 />
+								<input type="hidden" name="transferMode" id ="transferMode" value=1 />
 								<input type="hidden" name="nominal" id="nominal" value=0 />
 								<div class="login-tab">
 								<h2>DompetQ balance: {{$balance}}</h2>
+								<input type="checkbox" onclick="toggleThis()">Aktifkan rekber DompetQ</input>
+								<br />
+								<input type="date" name="expirydate" id="exp" disabled></input>
 								<button type="submit" class="btn btn-success pull-right">Kirim</button>
 								</div>
 								</form>
@@ -178,6 +181,15 @@
 			</div>
 		</div>
 		<script>
+			function toggleThis(){
+				if(document.getElementById('exp').disabled){
+					document.getElementById('exp').disabled = false; 
+					document.getElementById('transferMode').value = 2;}
+				else  {
+					document.getElementById('exp').disabled = true; 
+					document.getElementById('transferMode').value = 1;}
+				}
+				
 			function addElem() {
 				if(!(document.getElementById("total") == null)){
 					delElem(document.getElementById("total"));

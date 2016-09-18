@@ -29,30 +29,30 @@ Auth::routes();
 Route::get('/chartdata', 'ChartController@chartData');
 Route::get('/home', 'HomeController@index');
 
-Route::get('/login', function(){
-	return view('login');
-});
-
-Route::get('/signup', function(){
-	return view('register');
-});
-
 Route::get('/transactiondetail', function(){
 	return view('banktransferdetail');
 });
 
 Route::get('/{username}/transfer', function($username){
-	$bd = \App\BalanceDetail::where('user', $username)->first();
+	$user= \Auth::user()->username;
+	$bd = \App\BalanceDetail::where('user', $user)->first();
 	$balance = $bd->balance;
 	return view('transfer', ['username'=>$username, 'balance'=>$balance]);
 });
 
 Route::get('/{username}', function ($username) {
-	if($username == \Auth::user()->username){
-		return redirect()->to('/dashboard');
-	} else {
+	if(!\Auth::guest()){
+		if($username == \Auth::user()->username){
+			return redirect()->to('/dashboard');
+		} else {
+			$user = \App\User::where('username', $username)->get();
+	    	return view('profile', ['user' => $user]);
+	    }
+	} 
+	else 
+	{
 		$user = \App\User::where('username', $username)->get();
-    	return view('profile', ['user' => $user]);
-    }
+	    return view('profile', ['user' => $user]);
+	}
 });
 

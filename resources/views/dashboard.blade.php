@@ -40,46 +40,46 @@
 			</div>
 		</div>
 
+		<div style="width: 95%; height: 180px; overflow-x: auto; overflow-y: auto;">
+			<table style="white-space: nowrap;margin-left:auto; margin-right:auto; margin-top: 16px;">
+				<tr>
+					<td><b>Time Stamp</b></td>
+					<td><b>From</b></td>
+					<td><b>To</b></td>
+					<td><b>Nominal</b></td>
+					<td><b>Status</b></td>
+				</tr>
 
-		<table style="width:95%; height: 180px; overflow-y:scroll; overflow-x: scroll; white-space: nowrap;margin-left:auto; margin-right:auto; margin-top: 16px;">
-			<tr>
-				<td><b>Time Stamp</b></td>
-				<td><b>From</b></td>
-				<td><b>To</b></td>
-				<td><b>Nominal</b></td>
-				<td><b>Status</b></td>
-			</tr>
+				@foreach($ledger as $record)
+				<tr>
+					<td>{{$record->updated_at}}</td>
+					<td>@if($record->from == $username)
+							<b>{{$username}}</b>
+						@else
+							{{$record->from}}
+						@endif</td>
 
-			@foreach($ledger as $record)
-			<tr>
-				<td>{{$record->updated_at}}</td>
-				<td>@if($record->from == $username)
-						<b>{{$username}}</b>
-					@else
-						{{$record->from}}
-					@endif</td>
-
-					<td>@if($record->to == $username)
-						<b>{{$username}}</b>
-					@else
-						{{$record->to}}
-					@endif</td>
-				<td>Rp.{{$record->nominal}}</td>
-				<td>@if($record->status=="DONE")
-						<span style="color: green;">DONE</span>
-					@elseif($record->status=="ONCONFIRMATION")
-						<form action="/bank/confirm/{{$record->id}}" method="POST"><button class="btn btn-success" type="submit">Confirm</button></form>
-					@elseif($username == $record->from && $record->status == "PENDING")
-						<form action="/confirm/{{$record->id}}" method="POST"><button class="btn btn-success" type="submit">Confirm</button></form>
-					@elseif($record->status == "PENDING")
-						<span style="color: yellow;">PENDING</span>
-					@endif</td>
-			</tr>
-			@endforeach
-		</table>
-
+						<td>@if($record->to == $username)
+							<b>{{$username}}</b>
+						@else
+							{{$record->to}}
+						@endif</td>
+					<td>Rp.{{$record->nominal}}</td>
+					<td>@if($record->status=="DONE")
+							<span style="color: green;">DONE</span>
+						@elseif($record->status=="ONCONFIRMATION")
+							ON CONFIRMATION
+						@elseif($username == $record->from && $record->status == "PENDING")
+							<form action="/confirm/{{$record->id}}" method="POST">{{ csrf_field() }}<button class="btn btn-success" type="submit">Confirm</button></form>
+						@elseif($record->status == "PENDING")
+							<span style="color: yellow;">PENDING</span>
+						@endif</td>
+				</tr>
+				@endforeach
+			</table>
+		</div>
 		<script type="text/javascript">
-			var JSONstring = '[{"year": 2000,"month": 7,"day": 14,"balance": 45237363}, {"year": 2000,"month": 5,"day": 14,"balance": 11817330}, {"year": 2023,"month": 9,"day": 26,"balance": 60910369}, {"year": 2009,"month": 1,"day": 13,"balance": 94760892}, {"year": 2021,"month": 5,"day": 12,"balance": 98196305}]';
+			var JSONstring = '[{"year": 2012,"month": 7,"day": 14,"balance": 45237}, {"year": 2013,"month": 5,"day": 14,"balance": 118173}, {"year": 2014,"month": 9,"day": 26,"balance": 6091069}, {"year": 2015,"month": 1,"day": 13,"balance": 960892}, {"year": 2016,"month": 5,"day": 12,"balance": 1000000}, {"year": 2012,"month": 5,"day": 4,"balance": 715686}, {"year": 2015,"month": 7,"day": 26,"balance": 920007}, {"year": 2015,"month": 6,"day": 18,"balance": 218100}]';
 			var JSONobject = JSON.parse(JSONstring);
 		//	console.log(JSONobject);
 
@@ -103,9 +103,9 @@
 		      },
 		      animationEnabled: true,
 		      axisX: {
-		        valueFormatString: "MMM",
+		        valueFormatString: "YYYY",
 		        interval:1,
-		        intervalType: "month"
+		        intervalType: "year"
 		        
 		      },
 		      axisY:{

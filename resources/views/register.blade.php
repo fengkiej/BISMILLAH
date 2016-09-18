@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>Register</title>
-	<link href="css/style2.css" rel='stylesheet' type='text/css' />
+	<link href="/css/style2.css" rel='stylesheet' type='text/css' />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,600italic,700,300italic' rel='stylesheet' type='text/css'>

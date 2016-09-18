@@ -5,9 +5,8 @@
 	<!-- //Meta-Tags -->
 
 	<!-- Custom-Stylesheet-Links -->
-		<!-- Bootstrap-CSS --> 		<link rel="stylesheet" href="css/bootstrap.min.css" 	type="text/css" media="all">
-		<!-- Index-Page-CSS --> 	<link rel="stylesheet" href="css/styleHome.css" 			type="text/css" media="all">
 		<!-- Gallery-Popup-CSS --> 	<link rel="stylesheet" href="css/chocolat.css" 		type="text/css" media="all">
+		<!-- Index-Page-CSS --> 	<link rel="stylesheet" href="css/styleHome.css" 	type="text/css" media="all">
 	<!-- //Custom-Stylesheet-Links -->
 
 	<!-- Web-Fonts -->
@@ -20,9 +19,9 @@
 
 	<!-- Header -->
 	<div class="header" id="home">
-	<div style="position: absolute; z-index:1003;"><img style="margin-left:35%;margin-top:10%;width:30%;" src="images/QRIM.png"></div>
+	<div style="position: absolute; z-index:3;"><img style="margin-left:35%;margin-top:10%;width:30%;" src="images/QRIM.png"></div>
 		<div class="slider-info">
-			<div class="logo">
+			<div style="z-index: 3;margin-top: 10px" class="logo">
 				<a href="#">Q-RIM</a>
 			</div>
 		</div>
@@ -514,12 +513,12 @@
 
 	</div>
 	<!-- //Social -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+
 
 
 	<!-- Custom-JavaScript-File-Links -->
-
-		<!-- Supportive-JavaScript --> 			 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-		<!-- Necessary-JS-File-For-Bootstrap --> <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 		<!-- Slider-JavaScript -->
 			<script src="js/responsiveslides.min.js"></script>

@@ -31,9 +31,9 @@ class TransactionController extends Controller
 
 			if($this->addTransferRecord($senderid, $nominal, $receiverid, "DONE")){
 				$this->commitTransfer($nominal, $receiverid);
-				return 'thankyou!';
+				return view('todashboard', ['message' => 'thankyou!']);
 			} else {
-				return 'balance is not enough!';
+				return view('todashboard', ['message' => 'balance is not enough!']);
 			}
 		} 
 		else if($data['transferMode']==2) 
@@ -41,8 +41,12 @@ class TransactionController extends Controller
 			$senderid = \Auth::user()->username;
 			$receiverid = $user;
 
-			addTransferRecord($senderid, $nominal, $receiverid, "PENDING");
-			return 'thankyou!';
+			if(!$this::addTransferRecord($senderid, $nominal, $receiverid, "PENDING")){
+				return view('todashboard', ['message' => 'balance is not enough!']);
+			} else {
+				return view('todashboard', ['message' => 'thankyou!']);
+			}
+			
 		}
 		else if($data['transferMode']==3)
 		{
@@ -55,7 +59,7 @@ class TransactionController extends Controller
 		}
 		else if($data['transferMode']==4)
 		{
-			return 'coming soon!';
+			return view('todashboard', ['message' => 'comingsoon']);
 		}
 	}
 
@@ -90,7 +94,7 @@ class TransactionController extends Controller
 		}
 	}
 
-	public static function commitTransfer($nominal, $receiverid)
+	public function commitTransfer($nominal, $receiverid)
 	{
 		$receiver = \App\BalanceDetail::where('user', $receiverid)->first();
 
@@ -103,12 +107,15 @@ class TransactionController extends Controller
 
 	public function confirmBankTransaction($transactionId){
 		$record = \App\Ledger::where('id', $transactionId)->first();
+		$nominal=$record->nominal;
+		$receiverid=$record->to;
     	$confirmed = true; //check for confirmation by web scraping or bank api
     	if($confirmed){
-    		if(commitTransfer($nominal, $receiverid)){
+    		if($this::commitTransfer($nominal, $receiverid)){
     			$record->status = "DONE";
     			$record->save();
     		}
+    		return view('todashboard', ['message' => 'thankyou!']);
     	}
     }
 
@@ -116,11 +123,11 @@ class TransactionController extends Controller
     	$record = \App\Ledger::where('id', $transactionId)->first();
     	$nominal = $record->nominal;
     	$receiverid = $record->to;
-    	if(commitTransfer($nominal, $receiverid))
+    	if($this::commitTransfer($nominal, $receiverid))
     	{
     		$record->status = "DONE";
     		$record->save();
     	}
-    	return "thankyou!";
+    	return view('todashboard', ['message' => 'thankyou!']);
     }
 }	
