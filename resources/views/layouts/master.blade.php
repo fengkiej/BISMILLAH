@@ -6,14 +6,16 @@
 
         <script type="text/javascript" src="/js/jquery-2.1.4.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-        <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
-                <link rel="stylesheet" type="text/css" href="/css/custom.css"> 
+
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+
+        <link rel="stylesheet" type="text/css" href="css/custom.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,500,500i,700,900|Sail" rel="stylesheet">
         @yield('head')
 
         <title>Qrim - @yield('title')</title>
     </head>
-    <body style="background:#f9f9f9">
+    <body style="background:#d9d9d9">
         
         <nav id="nav" class="navbar-fixed-top navbar-inverse" style="height:8%;">
             <div class="container-fluid row">
@@ -23,10 +25,14 @@
                 <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6"></div>
                 <div class=" col-sm-4 col-xs-4 col-md-4 col-lg-4">
                     <ul class="nav navbar-nav navbar-right row">
-                        <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span id="ham-btn" class="glyphicon glyphicon-menu-hamburger" onclick="toggleNav()"></span></a></li>
-                        <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span id="notif-btn" class="glyphicon glyphicon-bell popup" onclick="notification()"></span></a></li>
-                        <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span id="search-btn" class="glyphicon glyphicon-search" onclick="search()"></span></a></li>
-                        <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6"></li>
+                        <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span class="glyphicon glyphicon-menu-hamburger" onclick="toggleNav()"></span></a></li>
+                        <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span class="glyphicon glyphicon-bell popup" onclick="notification()"></span></a></li>
+                        <li class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="#"><span class="glyphicon glyphicon-search" onclick="search()"></span></a></li>
+                        <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6"">
+                            <!-- <a href="">
+                                <input id="search-inp" type="text" name="search" placeholder="search.." style="border: none; border-radius: 10px; width: 100%; vertical-align: middle; float: right; padding-left: 10px; margin-right: 40%;">
+                            </a> -->
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -48,7 +54,7 @@
             <a href="#">Logout</a>
         </div>
 
-        <div class="main" style="padding-top:8%; padding-bottom:50px;" onclick="init()">
+        <div style="padding-top:8%; padding-bottom:50px;" onclick="init()">
             @yield('content')
         </div>
 
@@ -75,6 +81,17 @@
         </script>
 
         <script>
+            function search(){
+                var search = document.getElementById('search-inp');
+                if(search.style.width=="0px"){
+                    search.style.width="100%"
+                } else{
+                    search.style.width="0px"
+                }
+            }
+        </script>
+
+        <script>
             function init(){
                 var notif = document.getElementById('notif');
                 var sidebar = document.getElementById('sideNav');
@@ -85,12 +102,5 @@
             }
         </script>
 
-        <script>
-            function search(){
-                var ham = document.getElementById('ham-btn');
-                var notif = document.getElementById('notif-btn');
-                var src = document.getElementById('search-btn');
-            }
-        </script>
     </body>
 </html>

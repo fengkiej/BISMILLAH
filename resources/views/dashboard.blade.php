@@ -79,6 +79,22 @@
 		</table>
 
 		<script type="text/javascript">
+			var JSONstring = '[{"year": 2000,"month": 7,"day": 14,"balance": 45237363}, {"year": 2000,"month": 5,"day": 14,"balance": 11817330}, {"year": 2023,"month": 9,"day": 26,"balance": 60910369}, {"year": 2009,"month": 1,"day": 13,"balance": 94760892}, {"year": 2021,"month": 5,"day": 12,"balance": 98196305}]';
+			var JSONobject = JSON.parse(JSONstring);
+		//	console.log(JSONobject);
+
+			JSONobject.sort(function(a, b){return a['year']!=b['year'] ? a['year']-b['year'] : a['month']!=b['month'] ? a['month']-b['month'] : a['day']-b['day']});
+
+			var JSONdata = [];
+
+			for(var key in JSONobject){
+				var xx = new Date(JSONobject[key]['year'], JSONobject[key]['month']-1, JSONobject[key]['day']);
+				var yy = JSONobject[key]['balance'];
+
+				JSONdata[key] = {x: xx, y: yy};
+			}
+
+			console.log(JSONdata);
 			window.onload = function () {
 		    var chart = new CanvasJS.Chart("chartContainer",
 		    {
@@ -100,25 +116,11 @@
 		      {        
 		        type: "line",
 		        //lineThickness: 3,        
-		        dataPoints: [
-		        { x: new Date(2015, 00, 1), y: 450 },
-		        { x: new Date(2015, 01, 1), y: 414 },
-		        { x: new Date(2015, 02, 1), y: 520 },
-		        { x: new Date(2015, 03, 1), y: 460 },
-		        { x: new Date(2015, 04, 1), y: 450 },
-		        { x: new Date(2015, 05, 1), y: 500 },
-		        { x: new Date(2015, 06, 1), y: 480 },
-		        { x: new Date(2015, 07, 1), y: 480 },
-		        { x: new Date(2015, 08, 1), y: 410 },
-		        { x: new Date(2015, 09, 1), y: 500 },
-		        { x: new Date(2015, 10, 1), y: 480 },
-		        { x: new Date(2015, 11, 1), y: 500 }
-		        
-		        ]
+		        dataPoints: JSONdata
 		      }
 		      
-		      
 		      ]
+
 		    });
 
 			chart.render();
