@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
 @section('head')
-<link href="css/styleTransfer.css" rel='stylesheet' type='text/css' />
-<script type="text/javascript" src="js/jquery.min.js"></script>
+<link href="/css/styleTransfer.css" rel='stylesheet' type='text/css' />
+<script type="text/javascript" src="/js/jquery.min.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <link href="https://fonts.googleapis.com/css?family=Cousine:700" rel="stylesheet"> 
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
@@ -16,7 +16,7 @@
 		<h1 style="font-weight: 300;font-family:'Open Sans'; color: #000; font-size:1.7em; margin: 0.3em 0 0 0;">Detail Transfer</h1>
 		<div class="content">
 			
-			<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+			<script src="/js/easyResponsiveTabs.js" type="text/javascript"></script>
 			<script type="text/javascript">
 				$(document).ready(function () {
 					$('#horizontalTab').easyResponsiveTabs({
@@ -38,15 +38,14 @@
 						<button onclick="addElem()" id="tambahbtn" class="btn btn-success">Konfirmasi</button>
 					</div>
 				</div>
-			</div>
+			</div>				
 			<!-- total -->
 			<div class="resp-tabs-container" style="margin-bottom:15px;background-color:#eeeeee">
 				<h3 style="font-size: 26px;text-align: center;margin-bottom: 15px;color: #3AD5A0;font-weight: 500;font-family: 'Open Sans', sans-serif; ">
 					Total
 				</h3>						
-				<div style="text-align: center; padding-top: 15%; padding-bottom: 0px; font-size: 50px;  margin-top: 10px; height: 100px; overflow-y: scroll; font-family: 'Fondamento'; font-weight: 700;" id="matpels"></div>
-			</div>					
-
+				<div style="text-align: center; padding-bottom: 0px; font-size: 50px; height: 100px; overflow-y: scroll; font-family: 'Fondamento'; font-weight: 700;" id="matpels"></div>
+			</div>	
 			<div class="sap_tabs"> 
 				<!--Tabel Pilihan  -->
 				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
@@ -61,8 +60,8 @@
 					<div class="resp-tabs-container">
 					<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
 							<div class="payment-info">
-								<h3>Qrim</h3>
 								@if(\Auth::guest())
+								<h3>Qrim</h3>
 								<h4>Already Have A Qrim Account?</h4>
 								<div class="login-tab">
 								
@@ -91,6 +90,16 @@
 									</div>
 									
 								</div>
+								@else
+								<form action="/send/{{$username}}" method="POST">
+								{{ csrf_field() }}
+								<input type="hidden" name="transferMode" value=1 />
+								<input type="hidden" name="nominal" id="nominal" value=0 />
+								<div class="login-tab">
+								<h2>DompetQ balance: {{$balance}}</h2>
+								<button type="submit" class="btn btn-success pull-right">Kirim</button>
+								</div>
+								</form>
 								@endif
 							</div>
 						</div>
@@ -111,18 +120,25 @@
 									</div>
 									<div class="clear"></div>
 								</div>
-								<a href="#">Continue</a>
+								<form action="/send/{{$username}}" method="POST">
+								{{ csrf_field() }}
+								<input type="hidden" name="transferMode" value=3 />
+								<input type="hidden" name="nominal" id="nominal2" value=0 />
+								<button type="submit" class="btn btn-success pull-right">Lanjutkan</button>
+								</form>
 							</div>
 						</div>
 						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">	
 							<div class="payment-info">
 
-								<h3 class="pay-title">Debit Card Info</h3>
+								<h3 class="pay-title">Credit/Debit Card Info</h3>
 								<form>
 									<div class="tab-for">				
-										<h5>NAME ON CARD</h5>
+										<h5>NAMA</h5>
 										<input type="text" value="">
-										<h5>CARD NUMBER</h5>													
+										<h5>ALAMAT</h5>
+										<input type="text" value="">
+										<h5>16 DIGIT NOMOR KARTU</h5>													
 										<input class="pay-logo" type="text" value="0000-0000-0000-0000" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '0000-0000-0000-0000';}" required="">
 									</div>	
 									<div class="transaction">
@@ -130,16 +146,16 @@
 											<h5>EXPIRATION</h5>
 											<ul>
 												<li>
-													<input type="number" class="text_box" type="text" value="28" min="1" max="31" />	
+													<input type="number" class="text_box" type="text" value="28" min="1" max="12" />	
 												</li>
 												<li>
-													<input type="number" class="text_box" type="text" value="12" min="1" max="12" />	
+													<input type="number" class="text_box" type="text" value="16" min="1" max="99" />	
 												</li>
 											</ul>
 										</div>
 										<div class="tab-form-right user-form-rt">
 											<h5 st>CVV NUMBER</h5>													
-											<input style="" type="text" value="xxxx" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'xxxx';}" required="">
+											<input style="" type="text" value="xxx" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'xxx';}" required="">
 										</div>
 										<div class="clear"></div>
 									</div>
@@ -173,24 +189,26 @@
 				var boxContent = document.createElement("div");
 
 				var txtSpan = document.createElement("span");
-
 				var txtInput = document.getElementById("tambahpel");
+
 				x = parseInt(txtInput.value);
 				if (x<=50000) {
-					x += 2000;
+					x += 250;
 				}
 				else if (x > 50000 && x <= 100000){
-					x += 3000;
+					x += 500;
 				}
 				else if (x>100000 && x<=250000){
-					x += 5000;
+					x += 1000;
 				}
 				else if (x>250000 && x<=500000){
-					x += 8000;
+					x += 2000;
 				}
 				else if (x>500000 && x<=1000000){
-					x += 15000;
+					x += 3000;
 				}
+				document.getElementById("nominal").value = x;
+				document.getElementById("nominal2").value = x;
 				var text = document.createTextNode(x);
 
 														// hapusBtn.appendChild(btnTxt);

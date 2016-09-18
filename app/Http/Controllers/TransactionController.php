@@ -13,20 +13,30 @@ class TransactionController extends Controller
 		return 'Hello';
 	}
 
+	private function updateChartData($username){
+    	$newPoint = new \App\ChartData;
+    	$bd = \App\BalanceDetail::where('user', $username)->first();
+    	$newPoint->username = $username;
+    	$newPoint->balance = $bd->balance;
+    	$newPoint->save();
+    }
+
 	public function transfer(Request $req, $user)
 	{
 		$data = $req->all();
 		$nominal = $data['nominal'];
-		if($data['transferMode' == 1){
+		if($data['transferMode']==1){
 			$senderid = \Auth::user()->username;
 			$receiverid = $user;
 
-			if(addTransferRecord($senderid, $nominal, $receiverid, "DONE")){
-				commitTransfer($nominal, $receiverid);
-			};
-			return 'thankyou!';
+			if($this->addTransferRecord($senderid, $nominal, $receiverid, "DONE")){
+				$this->commitTransfer($nominal, $receiverid);
+				return 'thankyou!';
+			} else {
+				return 'balance is not enough!';
+			}
 		} 
-		else if($data['transferMode' == 2) 
+		else if($data['transferMode']==2) 
 		{
 			$senderid = \Auth::user()->username;
 			$receiverid = $user;
@@ -34,19 +44,22 @@ class TransactionController extends Controller
 			addTransferRecord($senderid, $nominal, $receiverid, "PENDING");
 			return 'thankyou!';
 		}
-		else if($data['transferMode' == 3)
+		else if($data['transferMode']==3)
 		{
 			$receiverid = $user;
+			$randomnumber = rand(1, 999);
 
-			addTransferRecord("BANKTRANSFER", $nominal, $receiverid, "ONCONFIRMATION");
+			$record = $this->addTransferRecord("BANKTRANSFER", ($nominal+$randomnumber), $receiverid, "ONCONFIRMATION");
+
+			return view('banktransferdetail', ['record'=>$record]);
 		}
-		else if($data['transferMode' == 4)
+		else if($data['transferMode']==4)
 		{
 			return 'coming soon!';
 		}
 	}
 
-	public static function addTransferRecord($senderid, $nominal, $receiverid, $status)
+	public function addTransferRecord($senderid, $nominal, $receiverid, $status)
 	{
 		$record = new \App\Ledger;
 		if($senderid != "BANKTRANSFER"){
@@ -63,7 +76,7 @@ class TransactionController extends Controller
 				$sender->balance -= $nominal;
 				$sender->save();
 
-				updateChartData($senderid);
+				$this::updateChartData($senderid);
 				return true;
 			} 
 		} else {
@@ -73,7 +86,7 @@ class TransactionController extends Controller
 			$record->status = $status;
 			$record->save();
 
-			return true;
+			return $record;
 		}
 	}
 
@@ -84,7 +97,7 @@ class TransactionController extends Controller
 		$receiver->balance += $nominal; 
 		$receiver->save();
 
-		updateChartData($receiverid);
+		$this->updateChartData($receiverid);
 		return true;
 	}
 
@@ -108,14 +121,6 @@ class TransactionController extends Controller
     		$record->status = "DONE";
     		$record->save();
     	}
-    	return "thankyou!"
+    	return "thankyou!";
     }
-
-    private function updateChartData($username){
-    	$newPoint = new \App\ChartData;
-    	$bd = \App\BalanceDetail::where('username', $username)->first();
-    	$newPoint->username = $username;
-    	$newPoint->balance = $bd->balance;
-    	$newPoint->save();
-    }
-}
+}	
